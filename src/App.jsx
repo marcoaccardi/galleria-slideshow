@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Switch,
+} from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header/Header";
 import Gallery from "./pages/Gallery";
@@ -9,10 +14,10 @@ function App() {
     <>
       <Router>
         <Header />
-        {/* LIGHTBOX */}
-        {/* ANIMATION FRAMER MOTION */}
-        <Route exact path='/' component={<Gallery />} />
-        <Route exact path='/slideshow' component={<Slideshow />} />
+        <Routes>
+          <Route exact path='/' component={<Gallery />} />
+          <Route exact path='/slideshow' component={<Slideshow />} />
+        </Routes>
       </Router>
     </>
   );
